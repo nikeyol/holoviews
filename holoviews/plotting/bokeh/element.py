@@ -1608,7 +1608,6 @@ class LegendPlot(ElementPlot):
             pos = self.legend_position
             if pos in self.legend_specs:
                 plot.legend[:] = []
-                legend.plot = None
                 legend.location = self.legend_offset
                 if pos in ['top', 'bottom']:
                     plot.legend.orientation = 'horizontal'
@@ -1748,7 +1747,6 @@ class OverlayPlot(GenericOverlayPlot, LegendPlot):
             legend.items[:] = []
         elif pos in ['above', 'below', 'right', 'left']:
             plot.legend.pop(plot.legend.index(legend))
-            legend.plot = None
             legend.location = self.legend_offset
             plot.add_layout(legend, pos)
 
