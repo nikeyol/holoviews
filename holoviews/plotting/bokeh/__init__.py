@@ -12,7 +12,8 @@ from ...element import (Curve, Points, Scatter, Image, Raster, Path,
                         ErrorBars, Text, HLine, VLine, Spline, Spikes,
                         Table, ItemTable, Area, HSV, QuadMesh, VectorField,
                         Graph, Nodes, EdgePaths, Distribution, Bivariate,
-                        TriMesh, Violin, Chord, Div, HexTiles, Labels, Sankey)
+                        TriMesh, Violin, Chord, Div, HexTiles, Labels, Sankey,
+                        Sticks)
 from ...core.options import Options, Cycle, Palette
 from ...core.util import LooseVersion, VersionError
 
@@ -33,7 +34,7 @@ from .callbacks import Callback # noqa (API import)
 from .element import OverlayPlot, ElementPlot
 from .chart import (PointPlot, CurvePlot, SpreadPlot, ErrorPlot, HistogramPlot,
                     SideHistogramPlot, BarPlot, SpikesPlot, SideSpikesPlot,
-                    AreaPlot, VectorFieldPlot)
+                    AreaPlot, VectorFieldPlot, StickPlot)
 from .graphs import GraphPlot, NodePlot, TriMeshPlot, ChordPlot
 from .heatmap import HeatMapPlot, RadialHeatMapPlot
 from .hex_tiles import HexTilesPlot
@@ -70,6 +71,7 @@ associations = {Overlay: OverlayPlot,
                 Spikes: SpikesPlot,
                 Area: AreaPlot,
                 VectorField: VectorFieldPlot,
+                Sticks: StickPlot,
                 Histogram: HistogramPlot,
 
                 # Rasters
